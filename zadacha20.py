@@ -13,6 +13,9 @@
 # ноутбук
 #     12
 
+from ipaddress import summarize_address_range
+
+
 eng = 'qwertyuiopasdfghjklzxcvbnm'
 
 rus = 'йцукенгшщзхъфывапролджэячсмитьбюё'
@@ -25,18 +28,18 @@ list_Russian = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ',
 word = input('Введите слово на русском или английском языке: ')
 
 if word[0].lower() in eng:
-    summa = 0
+    sum = 0
     for letter in word:
         for key, value in list_English.items():
             if letter.upper() in value:
-                summa += key
-    print(f'стоимость введенного английского слова = {summa}')
+                sum += key
+    print(f'стоимость введенного английского слова = {sum}')
 else:
     if word[0].lower() in rus:
-        summa = 0
+        sum = 0
         for letter in word:
 
             for key, value in list_Russian.items():
                 if letter.upper() in value:
-                    summa += key
-    print(f'стоимость введенного русского слова = {summa}')
+                    sum += key
+    print(f'стоимость введенного русского слова = {sum}')
