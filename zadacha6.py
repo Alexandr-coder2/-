@@ -13,16 +13,16 @@ print(r)
 c = l % 10
 l = l // 10
 b = l % 10
-a = l // 10 
+a = l // 10
 suml = a + b + c
 print(suml)
 c1 = r % 10
 r = r // 10
 b1 = r % 10
-a1 = r // 10 
+a1 = r // 10
 sumr = a1 + b1 + c1
 print(sumr)
-if(suml == sumr):
+if suml == sumr:
     print("Счастливый билет, Ура")
-else: 
-    print("Не счастливый")        
+else:
+    print("Не счастливый")
